@@ -1,7 +1,7 @@
 export const products = [
     {
         id: '1',
-        name: 'oil',
+        name: 'Oil',
         img: 'assets/mathilde-langevin-FDRaYqiTY1k-unsplash.jpg',
         description: 'skin oil',
         type: 'skincare',
@@ -10,7 +10,7 @@ export const products = [
     },
     {
         id: '2',
-        name: 'moisturizer',
+        name: 'Moisturizer',
         img: 'assets/mathilde-langevin-xAEkkCWfM9I-unsplash.jpg',
         description: 'skin oil',
         type: 'skincare',
@@ -18,23 +18,23 @@ export const products = [
     },
     {
         id: '3',
-        name: 'cleanser',
-        img: 'assets/mathilde-langevin-sMUqC7icx7g-unsplash.jpg',
-        description: 'face cleanser',
-        type: 'skincare',
-        price: 15
-    },
-    {
-        id: '4',
-        name: 'serum',
+        name: 'Serum',
         img: 'assets/mathilde-langevin-Pv7SK92At0o-unsplash.jpg',
         description: 'skin oil',
         type: 'skincare',
         price: 10
     },
     {
+        id: '4',
+        name: 'Cleanser',
+        img: 'assets/mathilde-langevin-sMUqC7icx7g-unsplash.jpg',
+        description: 'face cleanser',
+        type: 'skincare',
+        price: 15
+    },
+    {
         id: '5',
-        name: 'lotion',
+        name: 'Lotion',
         img: 'assets/mathilde-langevin-Msb7Wotyq0Q-unsplash.jpg',
         description: 'face and hand lotion',
         type: 'skincare',
