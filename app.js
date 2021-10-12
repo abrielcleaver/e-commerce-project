@@ -12,7 +12,7 @@ import { products } from './products.js';
 
 const productList = document.getElementById('product-list');
 
-for (let product of products ){
-  const productCard = renderProduct(product);
-  productList.append(productCard);
+for (let product of products){
+    const productCard = renderProduct(product);
+    productList.append(productCard);
 }
