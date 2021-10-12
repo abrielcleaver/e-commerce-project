@@ -8,10 +8,19 @@ export function renderProduct(products){
     const img = document.createElement('img');
     img.src = products.img;
 
+    const type = document.createElement('p');
+    type.textContent = products.type;
+
+    const description = document.createElement('p');
+    description.textContent = products.description;
+
+    const price = document.createElement('p');
+    price.textContent = products.price;
+
     const button = document.createElement('button');
     button.value = products.id;
-    button.textContent = 'add to cart';
+    button.textContent = 'ADD TO CART';
 
-    productCard.append(productHeader, img, button);
+    productCard.append(productHeader, img, description, type, price, button);
     return productCard;
 }
