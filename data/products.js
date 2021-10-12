@@ -5,7 +5,7 @@ export const products = [
         img: './assets/pothos-severin-candrian-GG9Gh1_FjbM-unsplash.jpg',
         description: 'Epipremnum aureum, also known as pothos, is native to Mo\'orea',
         type: 'Tropical',
-        price: '$20'
+        price: 20
 
     },
     {
