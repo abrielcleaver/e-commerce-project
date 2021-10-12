@@ -30,7 +30,7 @@
 ### Step 2
 
 * Make a new folder - data/
-* create file cart.js within data/
+* create file cart-data.js within data/
 * export array literal
     const cart = [{ items in the cart }]
 

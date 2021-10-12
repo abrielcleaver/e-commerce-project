@@ -3,6 +3,8 @@
 import { renderProduct } from "../data/render-product.js";
 import { products} from "../data/products.js";
 
+
+
 const test = QUnit.test;
 
 test('renderProduct should return HTML snippet', (expect) => {
@@ -18,3 +20,5 @@ test('renderProduct should return HTML snippet', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+
