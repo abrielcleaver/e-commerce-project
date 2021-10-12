@@ -1,43 +1,52 @@
 export const products = [
     {
         id: '1',
-        name: 'Oil',
-        img: 'assets/mathilde-langevin-FDRaYqiTY1k-unsplash.jpg',
-        description: 'skin oil',
-        type: 'skincare',
-        price: 16
+        name: 'Pothos',
+        img: 'assets/pothos-severin-candrian-GG9Gh1_FjbM-unsplash.jpg',
+        description: 'Epipremnum aureum, also known as pothos, is native to Mo\'orea',
+        type: 'Tropical',
+        price: 20
 
     },
     {
         id: '2',
-        name: 'Moisturizer',
-        img: 'assets/mathilde-langevin-xAEkkCWfM9I-unsplash.jpg',
-        description: 'skin oil',
-        type: 'skincare',
-        price: 12
-    },
-    {
-        id: '3',
-        name: 'Serum',
-        img: 'assets/mathilde-langevin-Pv7SK92At0o-unsplash.jpg',
-        description: 'skin oil',
-        type: 'skincare',
-        price: 10
-    },
-    {
-        id: '4',
-        name: 'Cleanser',
-        img: 'assets/mathilde-langevin-sMUqC7icx7g-unsplash.jpg',
-        description: 'face cleanser',
-        type: 'skincare',
+        name: 'Aloe Vera',
+        img: 'assets/aloe-severin-candrian-nU9U66FMutc-unsplash.jpg',
+        description: 'Aloe vera is a succulent plant species of the genus Aloe.',
+        type: 'Succulent',
         price: 15
     },
     {
+        id: '3',
+        name: 'Monstera Deliciosa',
+        img: 'assets/monstera-severin-candrian-bwsTJMnhcwE-unsplash.jpg',
+        description: 'Monstera deliciosa, the swiss cheese plant, is also known as the "split-leaf philodendron.',
+        type: 'Tropical',
+        price: 45
+    },
+    {
+        id: '4',
+        name: 'Money Tree',
+        img: 'assets/moneytreee-severin-candrian-xJh27OYI7zg-unsplash.jpg',
+        description: 'Pachira aquatica, also known as the Money Tree, is a native to Central and South America',
+        type: 'Tropical',
+        price: 30
+    },
+    {
         id: '5',
-        name: 'Lotion',
-        img: 'assets/mathilde-langevin-Msb7Wotyq0Q-unsplash.jpg',
-        description: 'face and hand lotion',
-        type: 'skincare',
-        price: 20
+        name: 'Aglaonema Cocomelon',
+        img: 'assets/Aglaonema Cocomelon-severin-candrian-Qhpuw3lNVpQ-unsplash.jpg',
+        description: 'Aglaonema grow wild in the tropical rain forests of South East Asia.',
+        type: 'Tropical',
+        price: 25
+    },
+    {
+        id: '6',
+        name: 'Sansevieria Kirkii',
+        img: 'assets/sansevieriakirkii-severin-candrian-yZIjR21cgZ0-unsplash.jpg',
+        description: 'Sansevieria kirkii, also known as Star Sansevieria.',
+        type: 'Tropical',
+        price: 25
     }
 ];
+
