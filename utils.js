@@ -27,3 +27,19 @@ export function calculateOrderTotal(cart, products) {
 export function toUSD(number){
     return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
 }
+
+// getCart
+    // get the cart from ls
+    // parse from JSON to JS
+    // if the cart doesn't exist yet -- return empty array
+
+// addItem(id) --> will increment by 1 (for now)
+    // call getCart()
+    // use findById to find matching cartItem with the id
+    // if cartItem is found, increment qty by 1
+    // else create new cartItem with id and qty = 1
+    // stringify the cart back to JSON
+    // set the cart to ls
+
+// clearCart
+// localStorage.removeItem('CART')
