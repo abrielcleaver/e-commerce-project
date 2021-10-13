@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 import { renderProduct } from "../data/render-product.js";
 import { products} from "../data/products.js";
-import { findById } from "../utils.js";
+import { findById, getCart } from "../utils.js";
 
 
 const test = QUnit.test;
@@ -33,4 +33,17 @@ test('findById should return item matching ID', (expect)=>{
 
     const actual = findById('1', products);
     expect.deepEqual(actual, expected);
+});
+
+test ('getCart should return cart if it exists', (expect)=>{
+
+    const fakeCart = [
+        {id:'1', qty: '2'},
+        {id:'3', qty: '4'}
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+
+    const cart = getCart();
+
+    expect.deepEqual(cart, fakeCart);
 });

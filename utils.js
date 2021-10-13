@@ -43,3 +43,10 @@ export function toUSD(number){
 
 // clearCart
 // localStorage.removeItem('CART')
+
+export function getCart(){
+    const cartString = localStorage.getItem('CART') || '[]';
+    const cart = JSON.parse(cartString);
+
+    return cart;
+}
