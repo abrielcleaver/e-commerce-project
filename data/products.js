@@ -35,10 +35,10 @@ export const products = [
     {
         id: '5',
         name: 'Aglaonema Cocomelon',
-        img: 'assets/Aglaonema Cocomelon-severin-candrian-Qhpuw3lNVpQ-unsplash.jpg',
+        img: './assets/Aglaonema Cocomelon-severin-candrian-Qhpuw3lNVpQ-unsplash.jpg',
         description: 'Aglaonema grow wild in the tropical rain forests of South East Asia.',
         type: 'Tropical',
-        price: '$25'
+        price: 25
     },
     {
         id: '6',

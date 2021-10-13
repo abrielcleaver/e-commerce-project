@@ -1,7 +1,8 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { renderProduct } from '../render-product.js';
-import { products } from '../products.js' ;
+import { renderProduct } from "../data/render-product.js";
+import { products} from "../data/products.js";
+import { findById } from "../utils.js";
 
 
 const test = QUnit.test;
@@ -20,4 +21,16 @@ test('renderProduct should return HTML snippet', (expect) => {
     expect.equal(actual, expected);
 });
 
+test('findById should return item matching ID', (expect)=>{
+    const expected = {
+        id: '1',
+        name: 'Pothos',
+        img: './assets/pothos-severin-candrian-GG9Gh1_FjbM-unsplash.jpg',
+        description: 'Epipremnum aureum, also known as pothos, is native to Mo\'orea',
+        type: 'Tropical',
+        price: 20
+    };
 
+    const actual = findById('1', products);
+    expect.deepEqual(actual, expected);
+});
