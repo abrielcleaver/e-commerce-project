@@ -32,18 +32,13 @@ export function toUSD(number){
     // get the cart from ls
     // parse from JSON to JS
     // if the cart doesn't exist yet -- return empty array
-
+export function getCart(){
+    const cartString = localStorage.getItem('CART') || '[]';
+    const cart = JSON.parse(cartString);
     
-    // clearCart
-    // localStorage.removeItem('CART')
-    
-    export function getCart(){
-        const cartString = localStorage.getItem('CART') || '[]';
-        const cart = JSON.parse(cartString);
-        
-        return cart;
-    }
-    // addItem(id) --> will increment by 1 (for now)
+    return cart;
+}
+// addItem(id) --> will increment by 1 (for now)
         // call getCart()
         // use findById to find matching cartItem with the id
         // if cartItem is found, increment qty by 1
@@ -52,11 +47,23 @@ export function toUSD(number){
         // set the cart to ls
 export function addItem(id){
     const cart = getCart();
-    const cartItem = findById(id, items);
+    // console.log(cart, id);
+            
+    const cartItem = findById(id, cart);
     if (cartItem){
         cartItem.qty++;
     } else {
         const newCartItem = { id: id, qty: '1'};
         cart.push(newCartItem);
     }
+}
+
+// clearCart
+// localStorage.removeItem('CART')
+
+export function clearCart(){
+    const clearString = localStorage.getItem('CART') || '[]';
+    const clearCrt = JSON.parse(clearString);
+
+    return clearCrt;
 }

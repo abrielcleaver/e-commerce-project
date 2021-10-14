@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 import { renderProduct } from "../data/render-product.js";
 import { products} from "../data/products.js";
-import { addItem, findById, getCart } from "../utils.js";
+import { addItem, clearCart, findById, getCart } from "../utils.js";
 
 
 const test = QUnit.test;
@@ -10,7 +10,7 @@ const test = QUnit.test;
 test('renderProduct should return HTML snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="product-card"><h2>Pothos</h2><img src="./assets/pothos-severin-candrian-GG9Gh1_FjbM-unsplash.jpg"><p>Epipremnum aureum, also known as pothos, is native to Mo'orea</p><p>Tropical</p><p>20</p><button value="1">ADD TO CART</button></div>`;
+    const expected = `<div class="product-card"><h2>Pothos</h2><img src="./assets/pothos-severin-candrian-GG9Gh1_FjbM-unsplash.jpg"><p>Epipremnum aureum, also known as pothos, is native to Mo'orea</p><p>Tropical</p><p>20</p><button id="1">ADD TO CART</button></div>`;
     const pothos = products[0];
     //Act 
     // Call the function you're testing and set the result to a const
@@ -61,4 +61,12 @@ test ('addItem should increment qty of what is in the cart', (expect)=>{
         {id:'3', qty: '4'} 
     ];
     expect.deepEqual(cart, expected)
+});
+
+test ('clearCart should remove item', (expect)=>{
+    const expected = [];
+
+    const actual = clearCart();
+
+    expect.deepEqual(actual, expected);
 });
