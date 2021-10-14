@@ -2,6 +2,8 @@ export function findById(id, items){
     // loop through the items
     for (let item of items){
         // if the item's id is equal to the id argument, return the item
+        console.log('bye');
+        console.log(item.id, id, 'hi');
         if (item.id === id){
             return item;
         }
@@ -47,15 +49,19 @@ export function getCart(){
         // set the cart to ls
 export function addItem(id){
     const cart = getCart();
-    // console.log(cart, id);
-            
+    // console.log(cart, id); 
+    
     const cartItem = findById(id, cart);
+    // console.log(cartItem);
     if (cartItem){
         cartItem.qty++;
     } else {
-        const newCartItem = { id: id, qty: '1'};
+        const newCartItem = { id: id, qty: 1};
         cart.push(newCartItem);
+       // console.log(cart);
     }
+    const stringCart = JSON.stringify(cart);
+    localStorage.setItem('CART', stringCart);
 }
 
 // clearCart

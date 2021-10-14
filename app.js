@@ -25,7 +25,7 @@ for (let product of products){
 const addButtons = document.querySelectorAll('button')
 for (let addBtn of addButtons){
   addBtn.addEventListener('click', ()=>{
-    console.log(addBtn);
+    // console.log(addBtn.id);
     addItem(addBtn.id);
     alert('Added to Cart!');
   });
