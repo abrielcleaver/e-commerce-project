@@ -49,16 +49,14 @@ test ('getCart should return cart if it exists', (expect)=>{
 });
 
 test ('addItem should increment qty of what is in the cart', (expect)=>{
-    const fakeCart = [
-        {id:'1', qty: '2'},
-        {id:'3', qty: '4'} 
-    ];
-    localStorage.setItem('CART', JSON.stringify(fakeCart));
-    addItem('1')
+    // const fakeCart = [
+    //     {id:'1', qty: '3'},
+    //     {id:'3', qty: '4'} 
+    // ];
+    // localStorage.setItem('CART', JSON.stringify(fakeCart)); addItem('1')
     const cart = getCart();
     const expected = [
-        {id:'1', qty: '2'},
-        {id:'3', qty: '4'} 
+        {id:'1', qty: '1'}
     ];
     expect.deepEqual(cart, expected)
 });

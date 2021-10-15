@@ -56,7 +56,7 @@ export function addItem(id){
     if (cartItem){
         cartItem.qty++;
     } else {
-        const newCartItem = { id: id, qty: 1};
+        const newCartItem = { id: id, qty: '1'};
         cart.push(newCartItem);
        // console.log(cart);
     }
