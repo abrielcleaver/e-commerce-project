@@ -70,7 +70,7 @@ test ('clearCart should remove item', (expect)=>{
         { id:'3', qty: '4' } 
     ];
 
-    localStorage.setItem('CART', JSON.stringify(cart));
+    localStorage.getItem('CART', JSON.stringify(cart));
     
     clearCart();
     const actual = clearCart();
