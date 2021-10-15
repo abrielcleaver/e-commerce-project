@@ -22,11 +22,11 @@ for (let product of products){
 // addEventListener to each one
 // 'click' calls addItem with buttons id
 
-const addButtons = document.querySelectorAll('button')
+const addButtons = document.querySelectorAll('button');
 for (let addBtn of addButtons){
-  addBtn.addEventListener('click', ()=>{
+    addBtn.addEventListener('click', ()=>{
     // console.log(addBtn.id);
-    addItem(addBtn.id);
-    alert('Added to Cart!');
-  });
+        addItem(addBtn.id);
+        alert('Added to Cart!');
+    });
 }
