@@ -1,8 +1,8 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { renderProduct } from "../data/render-product.js";
-import { products} from "../data/products.js";
-import { addItem, clearCart, findById, getCart } from "../utils.js";
+import { renderProduct } from '../data/render-product.js';
+import { products } from '../data/products.js';
+import { addItem, clearCart, findById, getCart } from '../utils.js';
 
 
 const test = QUnit.test;
@@ -10,7 +10,7 @@ const test = QUnit.test;
 test('renderProduct should return HTML snippet', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = `<div class="product-card"><h2>Pothos</h2><img src="./assets/pothos-severin-candrian-GG9Gh1_FjbM-unsplash.jpg"><p>Epipremnum aureum, also known as pothos, is native to Mo'orea</p><p>Tropical</p><p>20</p><button id=\"1\" class=\"add-button\">ADD TO CART</button></div>`;
+    const expected = `<div class="product-card"><h2>Pothos</h2><img src="./assets/pothos-severin-candrian-GG9Gh1_FjbM-unsplash.jpg"><p>Epipremnum aureum, also known as pothos, is native to Mo'orea</p><p>Tropical</p><p>20</p><button id="1" class="add-button">ADD TO CART</button></div>`;
     const pothos = products[0];
     //Act 
     // Call the function you're testing and set the result to a const
@@ -38,8 +38,8 @@ test('findById should return item matching ID', (expect)=>{
 test ('getCart should return cart if it exists', (expect)=>{
 
     const fakeCart = [
-        {id:'1', qty: '2'},
-        {id:'3', qty: '4'}
+        { id:'1', qty: '2' },
+        { id:'3', qty: '4' }
     ];
     localStorage.setItem('CART', JSON.stringify(fakeCart));
 
@@ -49,21 +49,30 @@ test ('getCart should return cart if it exists', (expect)=>{
 });
 
 test ('addItem should increment qty of what is in the cart', (expect)=>{
-    // const fakeCart = [
-    //     {id:'1', qty: '3'},
-    //     {id:'3', qty: '4'} 
-    // ];
-    // localStorage.setItem('CART', JSON.stringify(fakeCart)); addItem('1')
+    const fakeCart = [
+        { id:'1', qty: '3' },
+        { id:'3', qty: '4' } 
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart)); 
+    addItem('1');
     const cart = getCart();
     const expected = [
-        {id:'1', qty: '1'}
+        { id:'1', qty: 4 },
+        { id:'3', qty: '4' }
     ];
-    expect.deepEqual(cart, expected)
+    expect.deepEqual(cart, expected);
 });
 
 test ('clearCart should remove item', (expect)=>{
     const expected = [];
+    let cart = [
+        { id:'1', qty: '3' },
+        { id:'3', qty: '4' } 
+    ];
 
+    localStorage.setItem('CART', JSON.stringify(cart));
+    
+    clearCart();
     const actual = clearCart();
 
     expect.deepEqual(actual, expected);

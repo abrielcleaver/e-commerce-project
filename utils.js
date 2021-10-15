@@ -52,7 +52,7 @@ export function addItem(id){
     if (cartItem){
         cartItem.qty++;
     } else {
-        const newCartItem = { id: id, qty: '1'};
+        const newCartItem = { id: id, qty: '1' };
         cart.push(newCartItem);
     }
     const stringCart = JSON.stringify(cart);
@@ -63,7 +63,7 @@ export function addItem(id){
 // localStorage.removeItem('CART')
 
 export function clearCart(){
-    const clearString = localStorage.getItem('CART') || '[]';
+    const clearString = localStorage.setItem('CART') || '[]';
     const clearCrt = JSON.parse(clearString);
 
     return clearCrt;
