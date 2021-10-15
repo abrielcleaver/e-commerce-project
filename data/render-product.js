@@ -18,8 +18,9 @@ export function renderProduct(products){
     price.textContent = products.price;
 
     const button = document.createElement('button');
-    button.value = products.id;
+    button.id = products.id;
     button.textContent = 'ADD TO CART';
+    button.classList.add('add-button')
 
     productCard.append(productHeader, img, description, type, price, button);
     return productCard;
