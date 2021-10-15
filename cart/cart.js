@@ -5,7 +5,7 @@ import { renderLineItem } from '../render-line-item.js';
 const cart = getCart();
 // cartItem: {id:'1', qty: 2}
 const tbody = document.getElementById('table-body');
-for (let cartItem of cart ){
+for (let cartItem of cart){
     const productData = findById(cartItem.id, products);
 
     const tr = renderLineItem(cartItem, productData);
