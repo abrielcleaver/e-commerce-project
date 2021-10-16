@@ -63,8 +63,5 @@ export function addItem(id){
 // localStorage.removeItem('CART')
 
 export function clearCart(){
-    const clearString = localStorage.setItem('CART') || '[]';
-    const clearCrt = JSON.parse(clearString);
-
-    return clearCrt;
+    localStorage.removeItem('CART');
 }
