@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 import { renderProduct } from '../data/render-product.js';
 import { products } from '../data/products.js';
-import { addItem, clearCart, findById, getCart } from '../utils.js';
+import { addItem, clearCart, findById, getCart, getProducts, addProduct } from '../utils.js';
 
 
 const test = QUnit.test;
@@ -76,4 +76,20 @@ test ('clearCart should remove item', (expect)=>{
     const actual = clearCart();
 
     expect.deepEqual(actual, expected);
+});
+
+test ('addProduct should add new product', (expect)=>{
+    let products = getProducts();
+    const newPlant = {
+        id: '7',
+        name: 'Rubber Tree',
+        description: 'Rubber trees are among the easiest indoors plants, with large, dramatic foliage that can sometimes be variegated.',
+        type: 'Tropical',
+        price: 30
+    };
+
+    addProduct(newPlant);
+
+    products = getProducts();
+    expect.equal(products.length, 7);
 });

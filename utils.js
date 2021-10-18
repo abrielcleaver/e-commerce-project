@@ -81,3 +81,12 @@ export function getProducts() {
     }
     return plants || products;
 }
+
+export function addProduct(newPlant){
+    let plants = getProducts();
+
+    plants.push(newPlant);
+
+    let plantsString = JSON.stringify(plants);
+    localStorage.setItem('PRODUCTS', plantsString);
+}
