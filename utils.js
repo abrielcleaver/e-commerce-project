@@ -68,3 +68,16 @@ export function clearCart(){
 
     return clearCrt;
 }
+import { products } from './data/products.js';
+
+export function getProducts() {
+    // get products from LS
+    let storageProducts = localStorage.getItem('PRODUCTS');
+    const plants = JSON.parse(storageProducts);
+    // if there are NO products in LS -- seed the data
+    if (!plants){
+        const productString = JSON.stringify(products);
+        localStorage.setItem('PRODUCTS', productString);
+    }
+    return plants || products;
+}

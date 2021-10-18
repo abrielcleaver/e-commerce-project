@@ -8,10 +8,11 @@
   // update DOM to reflect the new state
 
 import { renderProduct } from './data/render-product.js';
-import { products } from './data/products.js';
-import { addItem } from './utils.js';
+// import { products } from './data/products.js';
+import { addItem, getProducts } from './utils.js';
 
 const productList = document.getElementById('product-list');
+const products = getProducts();
 
 for (let product of products){
     const productCard = renderProduct(product);
