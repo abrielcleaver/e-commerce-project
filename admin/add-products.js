@@ -18,4 +18,5 @@ form.addEventListener('submit', (e)=>{
     };
 
     addProduct(newPlant);
+    alert('Plant successfully added');
 });
