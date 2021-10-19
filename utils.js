@@ -65,3 +65,25 @@ export function addItem(id){
 export function clearCart(){
     localStorage.removeItem('CART');
 }
+import { products } from './data/products.js';
+
+export function getProducts() {
+    // get products from LS
+    let storageProducts = localStorage.getItem('PRODUCTS');
+    const plants = JSON.parse(storageProducts);
+    // if there are NO products in LS -- seed the data
+    if (!plants){
+        const productString = JSON.stringify(products);
+        localStorage.setItem('PRODUCTS', productString);
+    }
+    return plants || products;
+}
+
+export function addProduct(newPlant){
+    let plants = getProducts();
+
+    plants.push(newPlant);
+
+    let plantsString = JSON.stringify(plants);
+    localStorage.setItem('PRODUCTS', plantsString);
+}
